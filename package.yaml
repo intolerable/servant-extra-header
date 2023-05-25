@@ -1,0 +1,41 @@
+name: servant-extra-header
+version: 0.1.0.0
+
+license: BSD2
+
+language: GHC2021
+
+ghc-options:
+  - -Wall
+  - -Wextra
+
+default-extensions:
+  - BlockArguments
+  - DataKinds
+  - RecordWildCards
+  - TypeFamilies
+  - OverloadedStrings
+
+dependencies:
+  - base >= 4.16.0.0
+  - bytestring
+  - case-insensitive
+  - servant
+  - servant-server
+  - stm
+  - vault
+  - wai
+
+library:
+  source-dirs: src/
+
+tests:
+  servant-extra-header-spec:
+    source-dirs: spec
+    main: Main.hs
+    build-tools:
+      - hspec-discover
+    dependencies:
+      - servant-extra-header
+      - hspec
+      - hspec-wai

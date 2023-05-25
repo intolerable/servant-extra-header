@@ -1,0 +1,70 @@
+cabal-version: 2.2
+
+-- This file has been generated from package.yaml by hpack version 0.35.2.
+--
+-- see: https://github.com/sol/hpack
+
+name:           servant-extra-header
+version:        0.1.0.0
+license:        NONE
+build-type:     Simple
+
+library
+  exposed-modules:
+      Servant.ExtraHeader
+  other-modules:
+      Paths_servant_extra_header
+  autogen-modules:
+      Paths_servant_extra_header
+  hs-source-dirs:
+      src/
+  default-extensions:
+      BlockArguments
+      DataKinds
+      RecordWildCards
+      TypeFamilies
+      OverloadedStrings
+  ghc-options: -Wall -Wextra
+  build-depends:
+      base >=4.16.0.0
+    , bytestring
+    , case-insensitive
+    , servant
+    , servant-server
+    , stm
+    , vault
+    , wai
+  default-language: GHC2021
+
+test-suite servant-extra-header-spec
+  type: exitcode-stdio-1.0
+  main-is: Main.hs
+  other-modules:
+      Servant.ExtraHeaderSpec
+      Paths_servant_extra_header
+  autogen-modules:
+      Paths_servant_extra_header
+  hs-source-dirs:
+      spec
+  default-extensions:
+      BlockArguments
+      DataKinds
+      RecordWildCards
+      TypeFamilies
+      OverloadedStrings
+  ghc-options: -Wall -Wextra
+  build-tool-depends:
+      hspec-discover:hspec-discover
+  build-depends:
+      base >=4.16.0.0
+    , bytestring
+    , case-insensitive
+    , hspec
+    , hspec-wai
+    , servant
+    , servant-extra-header
+    , servant-server
+    , stm
+    , vault
+    , wai
+  default-language: GHC2021
